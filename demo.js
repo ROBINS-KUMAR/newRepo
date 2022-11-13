@@ -42,3 +42,4 @@ li[4].textContent ='Hello';
 // console.log(item);
 // console.log(item[4]);
 // item[4]
+console.log('Robins');
