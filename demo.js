@@ -44,20 +44,37 @@
 // item[4]
 
 //QUERYSELECTOR //
-var item = document.querySelector('.list-group-item');
-var secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.backgroundColor ='yellow';
-var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
-thirdItem.style.display ='none';
+// var item = document.querySelector('.list-group-item');
+// var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.backgroundColor ='yellow';
+// var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+// thirdItem.style.display ='none';
 
-//QUERYSELECTORFORALL //
-var even =document.querySelectorAll('li:nth-child(even)');
-for(var i =0; i< even.length ; i++)
-{
-    even[i].style.color ='green';
-}
-var odd =document.querySelectorAll('li:nth-child(odd)');
-for(var i =0; i< odd.length ; i++)
-{
-    odd[i].style.backgroundColor ='green';
-}
+// //QUERYSELECTORFORALL //
+// var even =document.querySelectorAll('li:nth-child(even)');
+// for(var i =0; i< even.length ; i++)
+// {
+//     even[i].style.color ='green';
+// }
+// var odd =document.querySelectorAll('li:nth-child(odd)');
+// for(var i =0; i< odd.length ; i++)
+// {
+//     odd[i].style.backgroundColor ='green';
+// }
+
+// ADD HELLO BEFORE ITEM LISTER //
+var newDiv  = document.createElement('div');
+
+var newDivText = document.createTextNode('Hello World');
+
+newDiv.appendChild(newDivText);
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+container.insertBefore(newDiv, h1);
+
+ var parentNode =document.getElementById('items');
+ 
+ parentNode.innerHTML = '<li> Hello World </li>' + parentNode.innerHTML; 
